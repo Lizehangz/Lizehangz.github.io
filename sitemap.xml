@@ -2,21 +2,28 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://yoursite.com/search/index.html</loc>
+    <loc>http://zhsvr.com/2020/03/12/First/</loc>
+    
+    <lastmod>2020-03-12T13:50:39.978Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://zhsvr.com/search/index.html</loc>
     
     <lastmod>2020-03-11T20:09:03.201Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/about/index.html</loc>
+    <loc>http://zhsvr.com/about/index.html</loc>
     
     <lastmod>2020-03-11T20:07:25.939Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/2020/03/12/hello-world/</loc>
+    <loc>http://zhsvr.com/2020/03/12/hello-world/</loc>
     
     <lastmod>2020-03-11T18:57:21.766Z</lastmod>
     
