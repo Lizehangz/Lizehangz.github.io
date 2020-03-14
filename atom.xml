@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zhsvr.com/"/>
-  <updated>2020-03-12T14:52:51.848Z</updated>
+  <updated>2020-03-14T11:57:28.210Z</updated>
   <id>http://zhsvr.com/</id>
   
   <author>
@@ -17,54 +17,29 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>test</title>
-    <link href="http://zhsvr.com/2020/03/12/test/"/>
-    <id>http://zhsvr.com/2020/03/12/test/</id>
-    <published>2020-03-12T14:52:51.000Z</published>
-    <updated>2020-03-12T14:52:51.848Z</updated>
+    <title>关于游戏强化功能</title>
+    <link href="http://zhsvr.com/2020/03/12/post1/"/>
+    <id>http://zhsvr.com/2020/03/12/post1/</id>
+    <published>2020-03-11T18:57:00.000Z</published>
+    <updated>2020-03-14T11:57:28.210Z</updated>
     
-    <summary type="html">
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>First</title>
-    <link href="http://zhsvr.com/2020/03/12/First/"/>
-    <id>http://zhsvr.com/2020/03/12/First/</id>
-    <published>2020-03-12T13:50:39.000Z</published>
-    <updated>2020-03-12T13:50:39.978Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="http://zhsvr.com/2020/03/12/hello-world/"/>
-    <id>http://zhsvr.com/2020/03/12/hello-world/</id>
-    <published>2020-03-11T18:57:21.766Z</published>
-    <updated>2020-03-12T14:38:06.932Z</updated>
-    
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+    <content type="html"><![CDATA[<p>有一个朋友问我关于某珠Online这款网游的强化几率是怎么定的,有没有存在垫刀,我想说的是无论什么游戏强化几率和规则都是自定义编写规定的。</p><h2 id="某珠Online的装备强化"><a href="#某珠Online的装备强化" class="headerlink" title="某珠Online的装备强化"></a>某珠Online的装备强化</h2><h3 id="首先"><a href="#首先" class="headerlink" title="首先"></a>首先</h3><p>这个网游的装备强化设定如下图所示。<br><img src="/images/zbqh.jpg" alt=""></p><p>强化之后的动画是翻牌,可能翻出成功、失败以及破碎;<br>强化成功+1 失败-1 破碎归零。</p><h3 id="用代码实现"><a href="#用代码实现" class="headerlink" title="用代码实现"></a>用代码实现</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">int Rate &#x3D; rand() % 100 + 1;  &#x2F;&#x2F;生成1到100之间的随机数</span><br><span class="line">if (Item-&gt;byGrade &#x3D;&#x3D; 6)    这是判断物品当前的强化等级 也就是6上7</span><br><span class="line">&#123;</span><br><span class="line">if (Rate &gt;&#x3D; 0 &amp;&amp; Rate &lt;&#x3D; 96) 去判断这个随机数是否在0到96这个范围里面</span><br><span class="line">&#123;                 如果在这个范围那就是强化成功</span><br><span class="line">Upgrade.Grade &#x3D; Item-&gt;byGrade + 1;</span><br><span class="line">Upgrade.UpgradeResult &#x3D; SUCCESS;&#x2F;&#x2F;Success卡片</span><br><span class="line">&#125;</span><br><span class="line">if (Rate &gt;&#x3D; 97 &amp;&amp; Rate &lt;&#x3D; 98)      以此类推</span><br><span class="line">  &#123;</span><br><span class="line">Upgrade.Grade &#x3D; Item-&gt;byGrade - 1;</span><br><span class="line">Upgrade.UpgradeResult &#x3D; Fail;&#x2F;&#x2F;Failed卡片</span><br><span class="line">&#125;</span><br><span class="line">if (Rate &gt;&#x3D; 99 &amp;&amp; Rate &lt;&#x3D; 100)</span><br><span class="line">&#123;</span><br><span class="line">Upgrade.Grade &#x3D; 0;</span><br><span class="line">Upgrade.UpgradeResult &#x3D; Broken;&#x2F;&#x2F;Broken卡片</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>那么像强化之后不一定是升1级的强化石比如说高强,如下:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">int GradeAdvacedStone &#x3D; 1 + rand() % 3; \\取1到3范围内的随机数作为强化追加等级</span><br><span class="line">\\那么只要把1改成GradeAdvacedStone就行了。</span><br><span class="line">Upgrade.Grade &#x3D; Item-&gt;byGrade + 1;</span><br><span class="line"></span><br><span class="line">Upgrade.Grade &#x3D; Item-&gt;byGrade + GradeAdvacedStone;</span><br></pre></td></tr></table></figure><h3 id="垫刀的实现"><a href="#垫刀的实现" class="headerlink" title="垫刀的实现"></a>垫刀的实现</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">这游戏有没有垫刀，只有设计服务端的人才清楚,那么垫刀的实现只需定义一个数值型全局变量,</span><br><span class="line">每次强化失败就使这个全局变量的值更大,然后下一次强化就把Rate的值减去这个变量的值使这个数值更靠近强化成功的范围,如果强化成功就把这个变量的值归0。这就是垫刀的实现。</span><br></pre></td></tr></table></figure><h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>所以强化有没有垫刀，是不是纯靠运气都要看服务端的代码怎么写,所有的规则都是设计服务端的人设定。</p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+        &lt;p&gt;有一个朋友问我关于某珠Online这款网游的强化几率是怎么定的,有没有存在垫刀,我想说的是无论什么游戏强化几率和规则都是自定义编写规定的。&lt;/p&gt;
+&lt;h2 id=&quot;某珠Online的装备强化&quot;&gt;&lt;a href=&quot;#某珠Online的装备强化&quot; class=&quot;headerli
       
     
     </summary>
     
     
+      <category term="网游" scheme="http://zhsvr.com/categories/%E7%BD%91%E6%B8%B8/"/>
+    
+    
+      <category term="C++" scheme="http://zhsvr.com/tags/C/"/>
     
   </entry>
   
